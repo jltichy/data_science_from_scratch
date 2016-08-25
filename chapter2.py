@@ -20,6 +20,22 @@ two_plus_three = 2 + \
 import re
 my_regex = re.compile("0-9+", re.I)
 
+import matplotlib.pyplot as plt
+
 from collections import defaultdict, Counter
 lookup = defaultdict(int)
 My_counter = Counter()
+
+match = 10
+from re import *  #uh oh, re has a match function
+print match       #"<function re.match>"
+
+# from __future__ import division
+# print '5 / 2' #This isn't working, and I'm not sure why.
+
+def double(x):
+  """this is where you put an optional docstring that explains what the function does.  for example, this function multiplies its input by 2"""
+  return x*2
+  
+x = 5
+print double(x)
