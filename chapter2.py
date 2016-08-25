@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+from __future__ import division
+
 for i in [1, 2, 3, 4, 5]:
   print i                   #first line in "for i" block
   for j in [1, 2, 3, 4, 5]:
@@ -30,8 +32,8 @@ match = 10
 from re import *  #uh oh, re has a match function
 print match       #"<function re.match>"
 
-# from __future__ import division
-# print '5 / 2' #This isn't working, and I'm not sure why.
+#from __future__ import division  #Note that this is now at the beginning of the file.
+print 5/2 #This isn't working, and I'm not sure why.
 
 def double(x):
   """this is where you put an optional : that explains what the 
@@ -63,3 +65,21 @@ subtract(10,5) #returns 5
 subtract(0,5)   #returns -5
 subtract(b=5)   #also returns -5
 
+single_quoted_string = 'data science'
+print single_quoted_string
+double_quoted_string = "data science"
+print double_quoted_string
+
+tab_string = "\t"   #represents the tab character
+len(tab_string)     #is 1
+not_tab_string = r"\t"    #represents the characters '\' and 't'
+len(not_tab_string) #is 2
+
+multi_line_string = """This is the first line
+and this is the second line
+and this is the thrid line"""
+
+try:
+    print 0/0
+except ZeroDivisionError:
+    print "cannot divide by zero"
