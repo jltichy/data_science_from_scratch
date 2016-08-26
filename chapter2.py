@@ -83,3 +83,7 @@ try:
     print 0/0
 except ZeroDivisionError:
     print "cannot divide by zero"
+
+print 10/0
+
+integer_list = [1,2,3]
