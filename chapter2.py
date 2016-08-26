@@ -84,6 +84,24 @@ try:
 except ZeroDivisionError:
     print "cannot divide by zero"
 
-print 10/0
+#print 10/0
 
 integer_list = [1,2,3]
+heterogeneous_list = ["string", 0.1, True]
+print heterogeneous_list
+list_of_lists = [integer_list, heterogeneous_list, []]
+print list_of_lists
+list_length = len(integer_list)   #equals 3
+list_sum = sum(integer_list)           #equals 6
+print list_sum
+
+x = range(10)             #is the list [0,1,...,9]
+print x
+zero = x[0]               #equals 0, lists are 0-indexed
+one = x[1]
+nine = x[-1]              #equals 9, 'Pythonic' for last element
+eight = x[-2]             #equals 8, 'Pythonic' for next to last element
+x[0] = -1                 #now x is [-1,1,2,3,...,9]
+first_three = x[:3]       #[-1,1,2]
+print first_three
+
