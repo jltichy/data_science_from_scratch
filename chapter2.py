@@ -103,22 +103,23 @@ nine = x[-1]              #equals 9, 'Pythonic' for last element
 eight = x[-2]             #equals 8, 'Pythonic' for next to last element
 x[0] = -1                 #now x is [-1,1,2,3,...,9]
 first_three = x[:3]       #[-1,1,2]
-print first_three
+print first_three         #[-1,1,2]
 three_to_end = x[3:]
-print three_to_end
+print three_to_end        #[3, 4, 5, 6, 7, 8, 9]
 one_to_four = x[1:5]
-print one_to_four
+print one_to_four         #[1, 2, 3, 4]
 last_three = x[-3:]
-print last_three
+print last_three          #[7, 8, 9]
 without_first_and_last = x[1:-1]
-print without_first_and_last
+print without_first_and_last    #[1, 2, 3, 4, 5, 6, 7, 8]
 copy_of_x = x[:]
-print copy_of_x
+print copy_of_x                 #[-1, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
 
 a = 1 in [1,2,3]
-print a
+print a           #true
 b = 0 in [1,2,3]
-print b
+print b           #false
 
 #Concatenate lists:
 x = [1,2,3]
