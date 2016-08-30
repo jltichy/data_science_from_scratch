@@ -123,5 +123,32 @@ print b           #false
 
 #Concatenate lists:
 x = [1,2,3]
+x.extend([4, 5, 6])
+print x             #x is now [1, 2, 3, 4, 5, 6]
 
+# or
 
+x = [1, 2, 3]
+print x
+y = x+[4, 5, 6]
+print y
+
+x =[1, 2, 3]
+
+x.append(0)
+print x           #x is now [1, 2, 3, 0]
+
+y = x[-1] 
+print y           #equals 0
+z = len(x)
+print z           #equals 4
+
+#unpack lists:
+x,y = [1,2]
+print x           #x is now 1
+print y           #y is now 2
+
+#if we don't care about the first element, we can do this:
+_,y = [1,2]       #now y is equal to 2 but it doesn't matter what the first element is
+
+#Tuples - page 21
