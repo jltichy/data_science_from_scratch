@@ -152,3 +152,29 @@ print y           #y is now 2
 _,y = [1,2]       #now y is equal to 2 but it doesn't matter what the first element is
 
 #Tuples - page 21
+my_list = [1,2]
+my_tuple = (1,2)
+other_tuple = 3,4
+my_list[1] = 3 #my_list is now [1,3]
+
+try:
+  my_tuple[1] = 3
+except TypeError:
+  print "cannot modify a tuple"
+
+def sum_and_product(x,y):
+  return (x+y),(x*y)
+sp = sum_and_product(2,3) #equals (5,6)
+print sp
+s,p = sum_and_product(5,10) #s is 15, p is 50
+print s
+print p
+
+#Tuples and lists can also be used for multiple assignments:
+x,y = 1,2   #now x is 1 and y is 2
+x,y = y,x   #Pythonic way to swap variables; now x is 2 and y is 1
+
+#Dictionaries - page 21
+empty_dict = {}       #Pythonic
+empty_dict2 = dict()  #less Pythonic
+grades = {"Joel":80, "Tim":95}  #dictionary literal
