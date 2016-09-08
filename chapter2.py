@@ -178,3 +178,51 @@ x,y = y,x   #Pythonic way to swap variables; now x is 2 and y is 1
 empty_dict = {}       #Pythonic
 empty_dict2 = dict()  #less Pythonic
 grades = {"Joel":80, "Tim":95}  #dictionary literal
+joels_grade = grades["Joel"]
+
+try:
+  kates_grade = grades["Kate"]
+except KeyError:
+  print "no grade for Kate"
+  
+joel_has_grade = "Joel" in grades #True
+kate_has_grade = "Kate" in grades #False
+
+joels_grade = grades.get("Joel", 0)   #equals 80
+kates_grade = grades.get("Kate", 0)   #equals 0
+no_ones_grade = grades.get("No One")  #default - default is none
+
+#note that there is a break here in the code for chapter 2.  it was 
+#getting to be too tedious and not necessary.
+
+#control flow - page 25
+
+if 1>2:
+  message = "if only 1 were greater than two..."
+elif 1>3:
+  message = "elif stands for 'else if'"
+else:
+  message = "when all else fails use else (if you want to)"
+  
+parity = "even" if x%2==0 else "odd"
+
+#we can also use while loops
+x = 0
+while x<10:
+  print x, "is less than 10"
+  x += 1
+#although more often we should use for and in, like this:
+for x in range(10):
+  print x, "is less than 10"
+  
+#or something like this:
+for x in range(10):
+  if x==3:
+    continue    #go immediately to the next iteration
+  if x==5:
+    break       #quit the loop entirely
+print x
+#this will print 0,1,2, and 4
+
+#start with truthiness - page 25
+
