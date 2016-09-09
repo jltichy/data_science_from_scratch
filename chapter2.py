@@ -232,7 +232,8 @@ print x == None     #prints True, but is not Pythonic
 print x is None     #prints True, and is Pythonic
 
 
-
+def some_function_that_returns_a_string():
+  return 'astring'
 
 #I'm not sure what this does:
 s = some_function_that_returns_a_string()
@@ -246,4 +247,5 @@ first_char = s and s[0]
 
 #and then it goes on to describe this:
 safe_x = x or 0
+print safe_x
 #the book says that this is definitely a number, but I still don't get it.
