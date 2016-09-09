@@ -225,4 +225,25 @@ print x
 #this will print 0,1,2, and 4
 
 #start with truthiness - page 25
+one_is_less_than_two = 1<2  #equals true
+true_equals_false = True == False   #equals false
+x = None
+print x == None     #prints True, but is not Pythonic
+print x is None     #prints True, and is Pythonic
 
+
+
+
+#I'm not sure what this does:
+s = some_function_that_returns_a_string()
+if s:
+  first_char = s[0]
+else:
+  first_char = ""
+
+#The book tells us we can do this instead:
+first_char = s and s[0]
+
+#and then it goes on to describe this:
+safe_x = x or 0
+#the book says that this is definitely a number, but I still don't get it.
