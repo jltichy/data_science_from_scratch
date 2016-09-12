@@ -248,4 +248,25 @@ first_char = s and s[0]
 #and then it goes on to describe this:
 safe_x = x or 0
 print safe_x
-#the book says that this is definitely a number, but I still don't get it.
+#the book says that this is definitely a number
+
+#sorting - page 27
+x = [4,1,2,3]
+y = sorted(x)   #is [1,2,3,4], x has not changed
+x.sort()        #now x is [1,2,3,4]
+
+#we can also sort by absolute value -- the above ex. uses the default of s to b
+x = sorted([-4,1,-2,3], key=abs, reverse=True)    #is[-4,3,-2,1]
+
+# #sort the words and counts from highest count to lowest
+# wc = sorted(word_counts.items(),
+#             key=lambda (word,count): count,
+#             reverse = True)
+            
+#there is an error in the above code, but I don't know what it is.  
+
+#list comprehensions - for transforming lists into other lists
+even_numbers = [x for x in range(5) if x % 2 == 0]      #[0,2,4]
+squares = [x * x for x in range(5)]                     #[0,1,4,9,16]
+even_squares = [x * x for x in even_numbers]            #[0,4,16]
+print even_squares
