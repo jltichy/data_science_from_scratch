@@ -284,3 +284,5 @@ increasing_pairs = [(x,y)                     #only pairs with x<y
                     for x in range(10)        #range(lo,hi) equals
                     for y in range(x+1, 10)]  #[lo, lo + 1, ..., hi -1]
 print increasing_pairs
+
+#Generators and Iterators - page 28
