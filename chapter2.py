@@ -286,3 +286,42 @@ increasing_pairs = [(x,y)                     #only pairs with x<y
 print increasing_pairs
 
 #Generators and Iterators - page 28
+def do_something_with(i):
+  print("i")
+  
+def lazy_range(n):
+  """a lazy version of range"""
+  i = 0
+  while i < n:
+    yield i
+    i +=1
+for i in lazy_range(10):
+  do_something_with(i)
+  
+def natural_numbers():
+  """returns 1,2,3,..."""
+  n=1
+  while True:
+    yield n
+    n += 1
+
+lazy_evens_below_20 = (i for i in lazy_range(20) if i % 2 == 0)
+for ele in lazy_evens_below_20:
+  print(ele)
+print lazy_evens_below_20
+
+#the above topic is still a little foggy - i need to work on this more
+
+#randomness - page 29
+import random
+four_uniform_randoms = [random.random() for _ in range(4)]
+print four_uniform_randoms
+#random.random() produces numbers uniformly between 0 and 1.  it's the random
+#function we'll use most often
+
+#the random seed function gives reproducible results:
+random.seed(10)       #set the seed to 10
+print random.random() #will give some random number 
+random.seed(10)       #set the seed to 10 again
+print random.random() #gives the same "random" number as before
+
