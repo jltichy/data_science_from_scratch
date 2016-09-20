@@ -325,3 +325,36 @@ print random.random() #will give some random number
 random.seed(10)       #set the seed to 10 again
 print random.random() #gives the same "random" number as before
 
+random.randrange(10)    #choose randomly from range(10) = [0,1,...,9]
+random.randrange(3,6)   #choose randomly from range(3,6) = [3,4,5]
+
+up_to_ten = range(10)
+random.shuffle(up_to_ten)
+print up_to_ten         # something like this [2,5,1,9,7,3,8,6,4,0]
+
+my_best_friend = random.choice(["Adam", "Eric", "Missy"])
+print "According to Cloud9, my best friend is %s." % my_best_friend 
+
+lottery_numbers = range(60)
+winning_numbers = random.sample(lottery_numbers, 6)   #[16,36,10,6,25,9]
+
+four_with_replacement = [random.choice(range(10)) for _ in range(4)]
+#[9,4,4,2]
+
+#Regular Expressions - page 30
+import re
+print all([
+  not re.match("a","cat"),
+  re.search("a", "cat"),
+  not re.search("c", "dog"),
+  3 == len(re.split("[ab]", "carbs")),
+  "R-D-" == re.sub("[0-9]", "-", "R2D2")
+  ])
+#all of these are true because cat doesn't start with a, cat has an a in it,
+#dog doesn't have a c in it, split on a or b to ['c','r','s'], replace digits
+#with dashes
+
+#Object Oriented Programming - page 30
+#by convention, we give classes PascalCase names
+class Set:
+  
