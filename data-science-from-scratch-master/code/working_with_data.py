@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+
+
 from __future__ import division
 from collections import Counter, defaultdict
 from functools import partial
@@ -7,8 +10,11 @@ from statistics import correlation, standard_deviation, mean
 from probability import inverse_normal_cdf
 from gradient_descent import maximize_batch
 import math, random, csv
-import matplotlib.pyplot as plt
 import dateutil.parser
+
+import matplotlib
+matplotlib.use('Agg') #This is required to run matplotlib on Google Chrome.
+import matplotlib.pyplot as plt
 
 def bucketize(point, bucket_size):
     """floor the point to the next lower multiple of bucket_size"""
