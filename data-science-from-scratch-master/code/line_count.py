@@ -1,4 +1,5 @@
 # line_count.py
+# hello
 import sys
 
 if __name__ == "__main__":
